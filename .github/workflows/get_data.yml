@@ -22,7 +22,18 @@ jobs:
       # Get data
       - name: Get data
         run: ./get_data.sh
-
+        
+      # Setup R
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: '4.0.3' # The R version to download (if necessary) and use.
+      - run: Rscript -e 'install.packages("EpiEstim")'
+      
+      # Compute Rt
+      - name: Compute Rt
+        run: Rscript calcoloRt_EpiEstim.R
+      
       # Commit & Push
       - name: Commit a new report (if necessary)
         run: |
