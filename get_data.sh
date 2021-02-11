@@ -9,4 +9,4 @@ mv calcolo_Rt_Italia/curva_epidemica_Italia* data/curva_epidemica_Italia
 
 rm data/calcolo_rt_italia.zip
 rm -r calcolo_Rt_Italia
-
+rm _MACOSX
