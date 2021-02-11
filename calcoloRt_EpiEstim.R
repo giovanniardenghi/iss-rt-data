@@ -49,4 +49,4 @@ date <- curva.epidemica[sel.date,1]
 
 Rt = data.frame("Data"=date, "Rt"=R.medio)
 
-write.csv(Rt,file='data/iss_rt.csv',row.names=FALSE)
+write.csv(Rt,file='data/iss_rt.csv',row.names=FALSE,quote=FALSE)
