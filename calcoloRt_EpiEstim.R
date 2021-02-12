@@ -47,6 +47,6 @@ R.upperCI <- stima$R$`Quantile.0.975(R)` ## estremo superiore dell'intervallo di
 sel.date <- stima$R[, "t_end"]
 date <- curva.epidemica[sel.date,1] 
 
-Rt = data.frame("Data"=date, "Rt"=R.medio)
+Rt = data.frame("Data"=date, "Rt - ISS"=R.medio)
 
 write.csv(Rt,file='data/iss_rt.csv',row.names=FALSE,quote=FALSE)
